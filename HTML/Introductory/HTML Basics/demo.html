@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/x-icon" href="Images/star.png" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="StyleCSS/styles.css" />
+
+    <!-- Internal CSS -->
+    <style>
+        p.id {
+            color: brown;
+            text-align: right;
+        }
+
+        /* Link Styles */
+        a:link {
+            color: green;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: pink;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: red;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+
+        a:active {
+            color: yellow;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+
+        tr:nth-child(even) {
+            background-color: #D6EEEE;
+        }
+
+        td:nth-child(even),
+        th:nth-child(even) {
+            background-color: #D6EEEE;
+        }
+
+        tr {
+            border-bottom: 1px solid black;
+        }
+
+        tr:hover {
+            background-color: #D6EEEE;
+        }
+
+        ul.unknown {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+
+li.unknown {
+  float: left;
+}
+
+li.unknown a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+li.unknown a:hover {
+  background-color: #111111;
+}
+    </style>
+</head>
+
+<body>
+    <h1>My First Heading</h1>
+    <p>My first paragraph.</p>
+
+    <h1>This is heading 1</h1>
+    <h2>This is heading 2</h2>
+    <h3>This is heading 3</h3>
+
+    <p>This is a paragraph.</p>
+    <p>
+        This is <br />
+        another paragraph.
+    </p>
+    <hr />
+
+    <!-- Bookmark Link -->
+    <a href="#C4">Jump to Chapter 4</a>
+    <!-- Bookmark to the next page -->
+    <a href="Basics.html#C4">Jump to Basics Chapter 4</a>
+    <!-- Poem problem -->
+
+    <pre>
+    <b>Bonnie lies over the ocean. bold</b> 
+
+    <strong>My Bonnie lies over the sea. strong</strong> 
+    
+    <i> My Bonnie lies over the ocean. italic</i>
+  
+    <em> Oh, bring back my Bonnie to me. Emphasized </em>
+
+    <mark> My Bonnie lies over the ocean. marked</mark>
+  
+    <small>Oh, bring back my Bonnie to me. small</small>
+
+    <del>My Bonnie lies over the ocean. deleted </del>
+  
+    <ins>Oh, bring back my Bonnie to me. inserted</ins> 
+
+    <p>This is <sub>subscripted</sub> text.</p>
+    
+    <p>This is <sup>superscripted</sup> text.</p>
+
+</pre>
+
+    <p>Here is a quote from WWF's website:</p>
+    <blockquote cite="http://www.worldwildlife.org/who/index.html">
+        For 50 years, WWF has been protecting the future of nature. The world's
+        leading conservation organization, WWF works in 100 countries and is
+        supported by 1.2 million members in the United States and close to 5
+        million globally.
+    </blockquote>
+
+    <p>
+        The <abbr title="World Health Organization">WHO</abbr> was founded in
+        1948.
+    </p>
+
+    <address>
+        okay, falana street <br />
+        bjai pala <br />
+        Delhi, <br />
+        India
+    </address>
+    <br />
+    <p>I am so <q> cool </q></p>
+
+    <p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p>
+
+    <bdo dir="rtl">This text will be written from right to left</bdo>
+
+    <!-- Inline CSS -->
+    <p style="color: blue; text-align: center">Bonnie lies over the ocean.</p>
+
+    <!-- Internal CSS with id to differentiate-->
+    <p class="id">Bonnie lies over the ocean.</p>
+
+    <!-- External CSS -->
+    <blockquote class="boo" cite="http://www.worldwildlife.org/who/index.html">
+        For 50 years, WWF has been protecting the future of nature. The world's
+        leading conservation organization, WWF works in 100 countries and is
+        supported by 1.2 million members in the United States and close to 5
+        million globally.
+    </blockquote>
+
+    <p>
+        This
+        <!-- great text -->
+        is a paragraph.
+    </p>
+
+    <br />
+
+    <!-- Links -->
+
+    <a href="https://www.instagram.com/nayanrajani98/">nayan rajani</a>
+
+    <p>
+        The target attribute can have one of the following <values:br></values:br>
+
+        _self - Default. Opens the document in the same window/tab as it was
+        clicked
+        <a href="https://www.instagram.com/nayanrajani98/" target="_self">nayan rajani</a><br />
+
+        _blank - Opens the document in a new window or tab
+        <a href="https://www.instagram.com/nayanrajani98/" target="_blank">nayan rajani</a><br />
+
+        _parent - Opens the document in the parent frame
+        <a href="https://www.instagram.com/nayanrajani98/" target="_parent">nayan rajani</a><br />
+
+        _top - Opens the document in the full body of the window
+        <a href="https://www.instagram.com/nayanrajani98/" target="_parent">nayan rajani</a><br />
+    </p>
+
+    <br />
+    <br />
+    <!-- This is a Break tag to change the line-->
+
+    <img src="https://th.bing.com/th/id/OIP.y4YjKmc1g-R9VZUvZzM_EQHaEK?pid=ImgDet&rs=1" alt="sunshine.com" width="250"
+        height="142" />
+
+    <h2>Absolute URLs</h2>
+    <p><a href="https://www.w3.org/">W3C</a></p>
+    <p><a href="https://www.google.com/">Google</a></p>
+
+    <h2>Relative URLs</h2>
+    <p><a href="html_images.asp">HTML Images</a></p>
+    <p><a href="/css/default.asp">CSS Tutorial</a></p>
+
+    <a href="mailto:nayanrajani2709@gmail.com">Send email</a>
+
+    <button onclick="document.location='https://www.w3schools.com/html/html_links.asp'">
+        HTML Tutorial
+    </button>
+
+    <a href="https://www.w3schools.com/html/" title="Go to W3Schools HTML section">Visit our HTML Tutorial</a>
+
+    <!-- Bookmark -->
+    <h2 id="C4">Chapter 4</h2>
+
+    <!-- Image -->
+    <img src="HTML, CSS, JS Structure.png" alt="fav_Image" style="float: right; height: 200px; width: 800px" />
+    <!-- GIF -->
+    <img src="Images/first.gif" alt="Moon Light" style="float: left; height: 200px; width: 800px" />
+
+    <!-- image Map -->
+    <img src="HTML, CSS, JS Structure.png" alt="HTML_Tutorial" usemap="#HTML_Tutorial" />
+    <map name="HTML_Tutorial">
+        <area shape="rect" coords="25,5,270,340" href="https://www.youtube.com/watch?v=pQN-pnXPaVg"
+            alt="Learn Basics" />
+    </map>
+
+    <p style="background-image: url('HTML\,\ CSS\,\ JS\ Structure.png')">
+        What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and
+        typesetting industry. Lorem Ipsum has been the industry's standard dummy
+        text ever since the 1500s, when an unknown printer took a galley of type
+        and scrambled it to make a type specimen book. It has survived not only
+        five centuries, but also the leap into electronic typesetting, remaining
+        essentially unchanged. It was popularised in the 1960s with the release of
+        Letraset sheets containing Lorem Ipsum passages, and more recently with
+        desktop publishing software like Aldus PageMaker including versions of
+        Lorem Ipsum. Why do we use it? It is a long established fact that a reader
+        will be distracted by the readable content of a page when looking at its
+        layout. The point of using Lorem Ipsum is that it has a more-or-less
+        normal distribution of letters, as opposed to using 'Content here, content
+        here', making it look like readable English. Many desktop publishing
+        packages and web page editors now use Lorem Ipsum as their default model
+        text, and a search for 'lorem ipsum' will uncover many web sites still in
+        their infancy. Various versions have evolved over the years, sometimes by
+        accident, sometimes on purpose (injected humour and the like). Where does
+        it come from? Contrary to popular belief, Lorem Ipsum is not simply random
+        text. It has roots in a piece of classical Latin literature from 45 BC,
+        making it over 2000 years old. Richard McClintock, a Latin professor at
+        Hampden-Sydney College in Virginia, looked up one of the more obscure
+        Latin words, consectetur, from a Lorem Ipsum passage, and going through
+        the cites of the word in classical literature, discovered the undoubtable
+        source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus
+        Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in
+        45 BC. This book is a treatise on the theory of ethics, very popular
+        during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor
+        sit amet..", comes from a line in section 1.10.32. The standard chunk of
+        Lorem Ipsum used since the 1500s is reproduced below for those interested.
+        Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by
+        Cicero are also reproduced in their exact original form, accompanied by
+        English versions from the 1914 translation by H. Rackham. Where can I get
+        some? There are many variations of passages of Lorem Ipsum available, but
+        the majority have suffered alteration in some form, by injected humour, or
+        randomised words which don't look even slightly believable. If you are
+        going to use a passage of Lorem Ipsum, you need to be sure there isn't
+        anything embarrassing hidden in the middle of text. All the Lorem Ipsum
+        generators on the Internet tend to repeat predefined chunks as necessary,
+        making this the first true generator on the Internet. It uses a dictionary
+        of over 200 Latin words, combined with a handful of model sentence
+        structures, to generate Lor
+    </p>
+
+    <table style="border: 1px solid black;width: 50%;">
+        <caption>Simple Table</caption>
+        <tr style="border: 1px solid black;">
+            <th style="border: 1px solid black;">
+                Name
+            </th>
+            <th style="border: 1px solid black;">
+                age
+            </th>
+            <th style="border: 1px solid black;">
+                sex
+            </th>
+        </tr>
+        <tr style="border: 1px solid black;">
+            <td style="border: 1px solid black;">
+                Nayan Rajani
+            </td>
+            <td style="border: 1px solid black;">
+                24
+            </td>
+            <td style="border: 1px solid black;">
+                Male
+            </td>
+        </tr>
+        <tr style="border: 1px solid black;">
+            <td style="border: 1px solid black;">
+                Jagdish Rajani
+            </td>
+            <td style="border: 1px solid black;">
+                56
+            </td>
+            <td style="border: 1px solid black;">
+                Male
+            </td>
+        </tr>
+    </table>
+    <br>
+
+    <table style="border: 1px solid black; border-collapse: collapse; width: 30%;">
+        <caption>Collapsed Table Borders</caption>
+        <tr style="border: 1px solid black; border-collapse: collapse; ">
+            <th style="border: 1px solid black; border-collapse: collapse; padding: 40px;">
+                Name
+            </th>
+            <th style="border: 1px solid black; border-collapse: collapse;">
+                age
+            </th>
+            <th style="border: 1px solid black; border-collapse: collapse;">
+                sex
+            </th>
+        </tr>
+        <tr style="border: 1px solid black; border-collapse: collapse; ">
+            <td style="border: 1px solid black; border-collapse: collapse;">
+                Nayan Rajani
+            </td>
+            <td style="border: 1px solid black; border-collapse: collapse;">
+                24
+            </td>
+            <td style="border: 1px solid black; border-collapse: collapse;">
+                Male
+            </td>
+        </tr>
+        <tr style="border: 1px solid black; border-collapse: collapse;">
+            <td style="border: 1px solid black; border-collapse: collapse;">
+                Jagdish Rajani
+            </td>
+            <td style="border: 1px solid black; border-collapse: collapse;">
+                56
+            </td>
+            <td style="border: 1px solid black; border-collapse: collapse;">
+                Male
+            </td>
+        </tr>
+    </table>
+    <br>
+    <table>
+        <tr>
+            <th colspan="2">Name</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Jill</td>
+            <td>Smith</td>
+            <td>43</td>
+        </tr>
+        <tr>
+            <td>Eve</td>
+            <td>Jackson</td>
+            <td>57</td>
+        </tr>
+    </table>
+    <br>
+    <table>
+        <tr>
+            <th>Name</th>
+            <td>Jill</td>
+        </tr>
+        <tr>
+            <th rowspan="2">Phone</th>
+            <td>555-1234</td>
+        </tr>
+        <tr>
+            <td>555-8745</td>
+        </tr>
+    </table>
+
+    <!-- Unordered List -->
+    <ul style="list-style-type:disc;">
+        <li>one</li>
+        <li>Two</li>
+        <li>Three</li>
+    </ul>
+    <ul style="list-style-type:square;">
+        <li>one</li>
+        <li>Two</li>
+        <li>Three</li>
+    </ul>
+<!-- Ordered List -->
+    <ol style="list-style-type:circle;">
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+    </ol>
+
+    <!-- Description List -->
+    <dl>
+        <dt>Coffee</dt>
+        <dd>- My fav. Coffee</dd>
+        <dt>Chai</dt>
+        <dd>-My Fav. Chai</dd>
+    </dl>
+
+    <!-- Nested List -->
+
+    <ul>
+        <li>Coffee</li>
+        <li>Tea
+          <ul>
+            <li>Black tea</li>
+            <li>Green tea</li>
+          </ul>
+        </li>
+        <li>Milk</li>
+    </ul>
+
+    <!-- Horizontal List/Navigation Bar -->
+    <ul class="unknown">
+        <li class="unknown"><a href="#home" class="unknown">Home</a></li>
+        <li class="unknown"><a href="#news" class="unknown">News</a></li>
+        <li class="unknown"><a href="#contact" class="unknown">Contact</a></li>
+        <li class="unknown"><a href="#about" class="unknown">About</a></li>
+    </ul>
+
+    <!-- Ordered List with type attribute -->
+    <ol type="1">
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+    </ol>
+
+    <ol type="A">
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+    </ol>
+
+    <ol type="a">
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+    </ol>
+
+    <ol type="I">
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+    </ol>
+
+    <ol type="i">
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+    </ol>
+<!-- Controlling the List Count -->
+    <ol start="50">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+      </ol>
+      
+      <ol type="I" start="50">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+      </ol>
+
+      <!-- Div -->
+
+      <div style="background-color:black;color:white;padding:20px;">
+        <h2>London</h2>
+        <p>London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+        <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
+      </div> 
+
+      <!-- Span -->
+      <p>My mother has <span style="color:blue;font-weight:bold">blue</span> eyes and my father has <span style="color:darkolivegreen;font-weight:bold">dark green</span> eyes.</p>
+
+</body>
+
+</html>

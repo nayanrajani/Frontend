@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Video</title>
+</head>
+
+<body>
+    <h4>Without source</h4>
+    <video src="Media/arjit-song.mp4" width="400" height="250" controls></video>
+
+    <h4>With source</h4>
+    <video width="400" height="250" controls>
+        <source src="Media/arjit-song.mp4" type="video/mp4">
+    </video>
+
+    <h4>With Auto Play</h4>
+    <!-- Add "autoplay" after controls in next line to play automatically -->
+    <video src="Media/tu-nazm-nazm-sa-mere.mp4" width="400" height="250" controls></video>
+
+    <h5>Add muted after autoplay to let your video start playing automatically (but muted):</h5>
+    <video src="Media/tu-nazm-nazm-sa-mere.mp4" width="400" height="250" autoplay controls muted></video>
+
+    <h3>Using Javascript adding extra buttons</h3>
+    <div style="text-align: center;">
+    <button onclick="PlayPause()">Play/Pause</button>
+    <button onclick="MakeBig()">Big Screen</button>
+    <button onclick="MakeSmall()">Small Screen</button>
+    <button onclick="MakeNormal()">Normal Screen</button>
+    <br><br>
+    <video id="arijit" width="420">
+        <source src="Media/arjit-song.mp4" type="video/mp4">
+    </video>
+</div>
+<script>
+    var myvideo = document.getElementById("arijit");
+    function PlayPause(){
+        if (myvideo.paused){
+            myvideo.play();
+        }
+        else {
+            myvideo.pause();
+        }
+    }
+    function MakeBig(){
+        myvideo.width = 560;
+    }
+    function MakeSmall(){
+        myvideo.width = 300;
+    }
+    function MakeNormal(){
+        myvideo.width = 400;
+    }
+</script>
+</body>
+
+</html>
+
+<!--  
+    HTML Video
+The HTML <video> element is used to show a video on a web page.
+
+Example
+Courtesy of Big Buck Bunny:
+
+The HTML <video> Element
+To show a video in HTML, use the <video> element:
+
+Example
+<video width="320" height="240" controls>
+  <source src="movie.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+Your browser does not support the video tag.
+</video>
+How it Works
+The controls attribute adds video controls, like play, pause, and volume.
+-->
+<!-- 
+It is a good idea to always include width and height attributes. If height and width are not set, the page might flicker while the video loads.
+
+The <source> element allows you to specify alternative video files which the browser may choose from. The browser will use the first recognized format.
+
+The text between the <video> and </video> tags will only be displayed in browsers that do not support the <video> element.
+
+HTML <video> Autoplay
+To start a video automatically, use the autoplay attribute:
+
+Example
+<video width="320" height="240" autoplay>
+  <source src="movie.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+Your browser does not support the video tag.
+</video>
+Note: Chromium browsers do not allow autoplay in most cases. However, muted autoplay is always allowed.
+
+Add muted after autoplay to let your video start playing automatically (but muted):
+
+Example
+<video width="320" height="240" autoplay muted>
+  <source src="movie.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+Your browser does not support the video tag.
+</video>
+Browser Support
+The numbers in the table specify the first browser version that fully supports the <video> element.
+-->
+<!-- 
+Element					
+<video>	4.0	9.0	3.5	4.0	10.5
+HTML Video Formats
+There are three supported video formats: MP4, WebM, and Ogg. The browser support for the different formats is:
+
+Browser	MP4	WebM	Ogg
+Edge	YES	YES	YES
+Chrome	YES	YES	YES
+Firefox	YES	YES	YES
+Safari	YES	YES	NO
+Opera	YES	YES	YES
+HTML Video - Media Types
+File Format	Media Type
+MP4	video/mp4
+WebM	video/webm
+Ogg	video/ogg
+HTML Video - Methods, Properties, and Events
+The HTML DOM defines methods, properties, and events for the <video> element.
+
+This allows you to load, play, and pause videos, as well as setting duration and volume.
+
+There are also DOM events that can notify you when a video begins to play, is paused, etc.
+
+Example: Using JavaScript
+
+Play/Pause Big Small Normal
+-->
+<!-- 
+Video courtesy of Big Buck Bunny.
+
+For a full DOM reference, go to our HTML Audio/Video DOM Reference.
+
+HTML Video Tags
+Tag	Description
+<video>	Defines a video or movie
+<source>	Defines multiple media resources for media elements, such as <video> and <audio>
+<track>	Defines text tracks in media players
+ -->
