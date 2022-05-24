@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Borders Color</title>
+    <style>
+      p.red {
+        border-style: solid;
+        border-color: red;
+      }
+
+      p.green {
+        border-style: solid;
+        border-color: green;
+      }
+
+      p.blue {
+        border-style: dotted;
+        border-color: blue;
+      }
+      p.one {
+        border-style: solid;
+        border-color: red green blue yellow; /* red top, green right, blue bottom and yellow left */
+      }
+      p.One {
+          border-style: solid;
+          border-color: #ff0000;
+      }
+      p.Two {
+          border-style: solid;
+          border-color: rgb(255, 0, 0);
+      }
+      p.Three {
+          border-style: solid;
+          border-color: hsl(0, 100%, 50%);
+      }
+    </style>
+  </head>
+  <body>
+    <h2>CSS border Color</h2>
+    <p class="red">Red Color</p>
+    <p class="green">Green Color</p>
+    <p class="blue">Blue Color</p>
+
+    <h2>Specific Side Colors</h2>
+    <p class="one">red top, green right, blue bottom and yellow left</p>
+
+    <h2>HEX Values</h2>
+    <p class="One"> This is a HEX value for Red</p>
+
+    <h2>RGB Values</h2>
+    <p class="Two"> This is a RGB value for Red</p>
+
+    <h2>HSL Values</h2>
+    <p class="Three"> This is a HSL value for Red</p>
+  </body>
+</html>
+
+<!-- 
+    CSS Border Color
+The border-color property is used to set the color of the four borders.
+
+The color can be set by:
+
+name - specify a color name, like "red"
+HEX - specify a HEX value, like "#ff0000"
+RGB - specify a RGB value, like "rgb(255,0,0)"
+HSL - specify a HSL value, like "hsl(0, 100%, 50%)"
+transparent
+Note: If border-color is not set, it inherits the color of the element.
+
+Example
+Demonstration of the different border colors:
+
+p.one {
+  border-style: solid;
+  border-color: red;
+}
+
+p.two {
+  border-style: solid;
+  border-color: green;
+}
+
+p.three {
+  border-style: dotted;
+  border-color: blue;
+}
+Result:
+
+Red border
+Green border
+Blue border
+Specific Side Colors
+The border-color property can have from one to four values (for the top border, right border, bottom border, and the left border). 
+
+Example
+p.one {
+  border-style: solid;
+  border-color: red green blue yellow; /* red top, green right, blue bottom and yellow left */
+}
+HEX Values
+The color of the border can also be specified using a hexadecimal value (HEX):
+
+Example
+p.one {
+  border-style: solid;
+  border-color: #ff0000; /* red */
+}
+RGB Values
+Or by using RGB values:
+
+Example
+p.one {
+  border-style: solid;
+  border-color: rgb(255, 0, 0); /* red */
+}
+HSL Values
+You can also use HSL values:
+
+Example
+p.one {
+  border-style: solid;
+  border-color: hsl(0, 100%, 50%); /* red */
+}
+ -->
