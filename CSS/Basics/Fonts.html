@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fonts</title>
+    ​
+    <style>
+      .p1 {
+        font-family: "Times New Roman", Times, serif;
+      }
+
+      .p2 {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .p3 {
+        font-family: "Lucida Console", "Courier New", monospace;
+      }
+      p.Arial {
+        font-family: Arial, sans-serif;
+      }
+      p.Verdana {
+        font-family: Verdana, sans-serif;
+      }
+      p.Helvetica {
+        font-family: Helvetica, sans-serif;
+      }
+      p.Tahoma {
+        font-family: Tahoma, sans-serif;
+      }
+      p.Trebuchet-MS {
+        font-family: "Trebuchet MS", sans-serif;
+      }
+      p.Times-New-Roman {
+        font-family: "Times New Roman", serif;
+      }
+      p.Georgia {
+        font-family: Georgia, serif;
+      }
+      p.Garamond {
+        font-family: Garamond, serif;
+      }
+      p.Courier-New {
+        font-family: "Courier New", monospace;
+      }
+      p.Brush-Script-MT {
+        font-family: "Brush Script MT", cursive;
+      }
+    </style>
+  </head>
+  <body>
+    <hr />
+    <h1>CSS font-family</h1>
+    <p class="p1">This is a paragraph, shown in the Times New Roman font.</p>
+    <p class="p2">This is a paragraph, shown in the Arial font.</p>
+    <p class="p3">This is a paragraph, shown in the Lucida Console font.</p>
+    <hr />
+    <p class="Arial">Lorem ipsum dolor sit amet-> Arial</p>
+    <p class="Verdana">Lorem ipsum dolor sit amet.-> Verdana</p>
+    <p class="Helvetica">Lorem ipsum dolor sit amet.-> Helvetica</p>
+    <p class="Tahoma">Lorem ipsum dolor sit amet.->Tahoma</p>
+    <p class="Trebuchet-MS">Lorem ipsum dolor sit amet.->Trebuchet-MS</p>
+    <p class="Times-New-Roman">Lorem ipsum dolor sit amet.->Times-New-Roman</p>
+    <p class="Georgia">Lorem ipsum dolor sit amet.->Georgia</p>
+    <p class="Garamond">Lorem ipsum dolor sit amet.->Garamond</p>
+    <p class="Courier-New">Lorem ipsum dolor sit amet.->Courier-New</p>
+    <p class="Brush-Script-MT">Lorem ipsum dolor sit amet.->Brush-Script-MT</p>
+  </body>
+</html>
+
+<!-- ----------------------------------------------------- -->
+<!-- 
+    CSS Fonts
+Choosing the right font for your website is important!
+
+Font Selection is Important
+Choosing the right font has a huge impact on how the readers experience a website.
+
+The right font can create a strong identity for your brand.
+
+Using a font that is easy to read is important. The font adds value to your text. It is also important to choose the correct color and text size for the font.
+
+Generic Font Families
+In CSS there are five generic font families:
+
+Serif fonts have a small stroke at the edges of each letter. They create a sense of formality and elegance.
+Sans-serif fonts have clean lines (no small strokes attached). They create a modern and minimalistic look.
+Monospace fonts - here all the letters have the same fixed width. They create a mechanical look. 
+Cursive fonts imitate human handwriting.
+Fantasy fonts are decorative/playful fonts.
+All the different font names belong to one of the generic font families. 
+
+Difference Between Serif and Sans-serif Fonts
+Serif vs. Sans-serif
+Note: On computer screens, sans-serif fonts are considered easier to read than serif fonts.
+
+Some Font Examples
+Generic Font Family	Examples of Font Names
+Serif	Times New Roman
+Georgia
+Garamond
+Sans-serif	Arial
+Verdana
+Helvetica
+Monospace	Courier New
+Lucida Console
+Monaco
+Cursive	Brush Script MT
+Lucida Handwriting
+Fantasy	Copperplate
+Papyrus
+The CSS font-family Property
+In CSS, we use the font-family property to specify the font of a text.
+
+Note: If the font name is more than one word, it must be in quotation marks, like: "Times New Roman".
+
+Tip: The font-family property should hold several font names as a "fallback" system, to ensure maximum compatibility between browsers/operating systems. Start with the font you want, and end with a generic family (to let the browser pick a similar font in the generic family, if no other fonts are available). The font names should be separated with comma. Read more about fallback fonts in the next chapter.
+
+Example
+Specify some different fonts for three paragraphs:
+
+.p1 {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.p2 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.p3 {
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+ -->
+<!-- ----------------------------------------------------- -->
+<!-- 
+    CSS Web Safe Fonts
+What are Web Safe Fonts?
+Web safe fonts are fonts that are universally installed across all browsers and devices.
+
+Fallback Fonts
+However, there are no 100% completely web safe fonts. There is always a chance that a font is not found or is not installed properly.
+
+Therefore, it is very important to always use fallback fonts.
+
+This means that you should add a list of similar "backup fonts" in the font-family property. If the first font does not work, the browser will try the next one, and the next one, and so on. Always end the list with a generic font family name.
+
+Example
+Here, there are three font types: Tahoma, Verdana, and sans-serif. The second and third fonts are backups, in case the first one is not found.
+
+p {
+font-family: Tahoma, Verdana, sans-serif;
+}
+Best Web Safe Fonts for HTML and CSS
+The following list are the best web safe fonts for HTML and CSS:
+
+Arial (sans-serif)
+Verdana (sans-serif)
+Helvetica (sans-serif)
+Tahoma (sans-serif)
+Trebuchet MS (sans-serif)
+Times New Roman (serif)
+Georgia (serif)
+Garamond (serif)
+Courier New (monospace)
+Brush Script MT (cursive)
+Note: Before you publish your website, always check how your fonts appear on different browsers and devices, and always use fallback fonts!
+
+Arial (sans-serif)
+Arial is the most widely used font for both online and printed media. Arial is also the default font in Google Docs.
+
+Arial is one of the safest web fonts, and it is available on all major operating systems.
+
+Example
+Lorem ipsum dolor sit amet
+Lorem ipsum dolor sit amet.
+
+0 1 2 3 4 5 6 7 8 9
+
+Verdana (sans-serif)
+Verdana is a very popular font. Verdana is easily readable even for small font sizes.
+
+Example
+Lorem ipsum dolor sit amet
+Lorem ipsum dolor sit amet.
+
+0 1 2 3 4 5 6 7 8 9
+
+Helvetica (sans-serif)
+The Helvetica font is loved by designers. It is suitable for many types of business.
+
+Example
+Lorem ipsum dolor sit amet
+Lorem ipsum dolor sit amet.
+
+0 1 2 3 4 5 6 7 8 9
+
+Tahoma (sans-serif)
+The Tahoma font has less space between the characters.
+
+Example
+Lorem ipsum dolor sit amet
+Lorem ipsum dolor sit amet.
+
+0 1 2 3 4 5 6 7 8 9
+
+Trebuchet MS (sans-serif)
+Trebuchet MS was designed by Microsoft in 1996. Use this font carefully. Not supported by all mobile operating systems.
+
+Example
+Lorem ipsum dolor sit amet
+Lorem ipsum dolor sit amet.
+
+0 1 2 3 4 5 6 7 8 9
+
+Times New Roman (serif)
+Times New Roman is one of the most recognizable fonts in the world. It looks professional and is used in many newspapers and "news" websites. It is also the primary font for Windows devices and applications.
+
+Example
+Lorem ipsum dolor sit amet
+Lorem ipsum dolor sit amet.
+
+0 1 2 3 4 5 6 7 8 9
+
+Georgia (serif)
+Georgia is an elegant serif font. It is very readable at different font sizes, so it is a good candidate for mobile-responsive design.
+
+Example
+Lorem ipsum dolor sit amet
+Lorem ipsum dolor sit amet.
+
+0 1 2 3 4 5 6 7 8 9
+
+Garamond (serif)
+Garamond is a classical font used for many printed books. It has a timeless look and good readability.
+
+Example
+Lorem ipsum dolor sit amet
+Lorem ipsum dolor sit amet.
+
+0 1 2 3 4 5 6 7 8 9
+
+Courier New (monospace)
+Courier New is the most widely used monospace serif font. Courier New is often used with coding displays, and many email providers use it as their default font. Courier New is also the standard font for movie screenplays.
+
+Example
+Lorem ipsum dolor sit amet
+Lorem ipsum dolor sit amet.
+
+0 1 2 3 4 5 6 7 8 9
+
+Brush Script MT (cursive)
+The Brush Script MT font was designed to mimic handwriting. It is elegant and sophisticated, but can be hard to read. Use it carefully.
+
+Example
+Lorem ipsum dolor sit amet
+Lorem ipsum dolor sit amet.
+
+0 1 2 3 4 5 6 7 8 9
+
+
+ -->
+<!-- ----------------------------------------------------- -->
+
+<!-- ----------------------------------------------------- -->
+
+<!-- ----------------------------------------------------- -->
+
+<!-- ----------------------------------------------------- -->
+
+<!-- ----------------------------------------------------- -->
