@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Links</title>
+    <style>
+      a.id {
+        color: hotpink;
+      }
+      /* unvisited link */
+      a:link {
+        color: red;
+        text-decoration: none;
+        background-color: yellow;        
+      }
+
+      /* visited link */
+      a:visited {
+        color: green;
+        text-decoration: none;
+        background-color: cyan;
+      }
+
+      /* mouse over link */
+      a:hover {
+        color: hotpink;
+        text-decoration: underline;
+        background-color: lightgreen;
+      }
+
+      /* selected link */
+      a:active {
+        color: blue;
+        text-decoration: underline;
+        background-color: hotpink;
+      }
+      a.button:link, a.button:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a.button:hover, a.button:active {
+  background-color: red;
+}
+    </style>
+  </head>
+  <body>
+    <h1>Styling Links</h1>
+    <p>
+      Links can be styled with any CSS property (e.g. color, font-family,
+      background, etc.).
+    </p>
+
+    <a class="id" href="https://www.w3schools.com/css/css_link.asp">CSS Links</a>
+    <h4>/* unvisited link */</h4>
+    <a href="https://www.w3schools.com/css/css_link.asp">unvisited CSS Links</a>
+    <h4>/* visited link */</h4>
+    <a href="https://www.w3schools.com/css/css_link.asp">visited CSS Links</a>
+    <h4>/* mouse over link */</h4>
+    <a href="https://www.w3schools.com/css/css_link.asp"
+      >mouse over CSS Links</a
+    >
+    <h4>/* selected link */</h4>
+    <a href="https://www.w3schools.com/css/css_link.asp">selected CSS Links</a>
+
+    <h2>Link Button</h2>
+
+<p>A link styled as a button:</p>
+<a class="button" href="" target="_blank">This is a link</a>
+  </body>
+</html>
+
+<!-- 
+    CSS Links
+With CSS, links can be styled in many different ways.
+
+Text Link Text Link Link Button Link Button
+Styling Links
+Links can be styled with any CSS property (e.g. color, font-family, background, etc.).
+
+Example
+a {
+  color: hotpink;
+}
+In addition, links can be styled differently depending on what state they are in.
+
+The four links states are:
+
+a:link - a normal, unvisited link
+a:visited - a link the user has visited
+a:hover - a link when the user mouses over it
+a:active - a link the moment it is clicked
+
+When setting the style for several link states, there are some order rules:
+
+a:hover MUST come after a:link and a:visited
+a:active MUST come after a:hover
+Text Decoration
+The text-decoration property is mostly used to remove underlines from links:
+
+Background Color
+The background-color property can be used to specify a background color for links:
+
+Link Buttons
+This example demonstrates a more advanced example where we combine several CSS properties to display links as boxes/buttons:
+
+
+
+ -->

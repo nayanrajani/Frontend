@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      table.Hoverable {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      th.Hoverable{
+          /* Table Color */
+        background-color: #04AA6D;
+  color: white;
+      }
+      td.Hoverable {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+
+      tr.Hoverable:hover {
+        background-color: coral;
+      }
+
+      table.Striped {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      th,
+      td {
+        text-align: left;
+        padding: 8px;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Hoverable Table</h2>
+
+    <p>Move the mouse over the table rows to see the effect.</p>
+
+    <table class="Hoverable">
+      <tr  class="Hoverable">
+        <th  class="Hoverable">First Name</th>
+        <th class="Hoverable">Last Name</th>
+        <th class="Hoverable">Points</th>
+      </tr>
+      <tr class="Hoverable">
+        <td class="Hoverable">Peter</td>
+        <td class="Hoverable">Griffin</td>
+        <td class="Hoverable">$100</td>
+      </tr>
+      <tr class="Hoverable">
+        <td class="Hoverable">Lois</td>
+        <td class="Hoverable">Griffin</td>
+        <td class="Hoverable">$150</td>
+      </tr>
+      <tr class="Hoverable">
+        <td class="Hoverable">Joe</td>
+        <td class="Hoverable">Swanson</td>
+        <td class="Hoverable">$300</td>
+      </tr>
+      <tr class="Hoverable">
+        <td>Cleveland</td>
+        <td>Brown</td>
+        <td>$250</td>
+      </tr>
+    </table>
+
+    <h2>Striped Table</h2>
+
+    <p>
+      For zebra-striped tables, use the nth-child() selector and add a
+      background-color to all even (or odd) table rows:
+    </p>
+
+    <table class="Striped">
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Points</th>
+      </tr>
+      <tr>
+        <td>Peter</td>
+        <td>Griffin</td>
+        <td>$100</td>
+      </tr>
+      <tr>
+        <td>Lois</td>
+        <td>Griffin</td>
+        <td>$150</td>
+      </tr>
+      <tr>
+        <td>Joe</td>
+        <td>Swanson</td>
+        <td>$300</td>
+      </tr>
+      <tr>
+        <td>Cleveland</td>
+        <td>Brown</td>
+        <td>$250</td>
+      </tr>
+    </table>
+
+    <h2>Responsive Table</h2>
+<p>A responsive table will display a horizontal scroll bar if the screen is too 
+small to display the full content. Resize the browser window to see the effect:</p>
+<p>To create a responsive table, add a container element (like div) with <strong>overflow-x:auto</strong> around the table element:</p>
+
+<div style="overflow-x: auto;">
+  <table>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Points</th>
+      <th>Points</th>
+      <th>Points</th>
+      <th>Points</th>
+      <th>Points</th>
+      <th>Points</th>
+      <th>Points</th>
+      <th>Points</th>
+      <th>Points</th>
+      <th>Points</th>
+    </tr>
+    <tr>
+      <td>Jill</td>
+      <td>Smith</td>
+      <td>50</td>
+      <td>50</td>
+      <td>50</td>
+      <td>50</td>
+      <td>50</td>
+      <td>50</td>
+      <td>50</td>
+      <td>50</td>
+      <td>50</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <td>Eve</td>
+      <td>Jackson</td>
+      <td>94</td>
+      <td>94</td>
+      <td>94</td>
+      <td>94</td>
+      <td>94</td>
+      <td>94</td>
+      <td>94</td>
+      <td>94</td>
+      <td>94</td>
+      <td>94</td>
+    </tr>
+    <tr>
+      <td>Adam</td>
+      <td>Johnson</td>
+      <td>67</td>
+      <td>67</td>
+      <td>67</td>
+      <td>67</td>
+      <td>67</td>
+      <td>67</td>
+      <td>67</td>
+      <td>67</td>
+      <td>67</td>
+      <td>67</td>
+    </tr>
+  </table>
+</div>
+  </body>
+</html>
