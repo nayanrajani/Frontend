@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            display: inline;
+        }
+
+        ul.Floating {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        li.Floating {
+            float: right;
+        }
+
+        li.Floating a.Floating {
+            display: block;
+            padding: 8px;
+            background-color: #dddddd;
+        }
+
+        ul.examplee1 {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li.examplee1 {
+            float: left;
+            border-right: 1px solid #bbb;
+        }
+
+        li.examplee1 a.examplee1 {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li.examplee1 a.examplee1:hover {
+            background-color: #111;
+        }
+        #active {
+  background-color: #04AA6D;
+}
+    </style>
+</head>
+
+<body>
+    <h2>Inline List Items</h2>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
+    </ul>
+
+    <h2>Floating List Items</h2>
+    <ul class="Floating">
+        <li class="Floating"><a class="Floating" href="#home">Home</a></li>
+        <li class="Floating"><a class="Floating" href="#news">News</a></li>
+        <li class="Floating"><a class="Floating" href="#contact">Contact</a></li>
+        <li class="Floating"><a class="Floating" href="#about">About</a></li>
+    </ul>
+
+    <h2>Horizontal Navigation Bar | Active/Current Navigation Link | Right-Align Links | Border Dividers -> Example 1</h2>
+    <ul class="examplee1">
+        <li class="examplee1"><a class="examplee1" id="active" href="#home">Home</a></li>
+        <li class="examplee1"><a class="examplee1" href="#news">News</a></li>
+        <li class="examplee1"><a class="examplee1" href="#contact">Contact</a></li>
+        <li style="float:right" class="examplee1"><a class="examplee1" id="active" href="#about">About</a></li>
+    </ul>
+
+    <h2>Fixed Navigation Bar | Example 2</h2>
+
+</body>
+
+</html>
+
+
+
+
+<!-- 
+    CSS Horizontal Navigation Bar
+Horizontal Navigation Bar
+
+There are two ways to create a horizontal navigation bar. Using inline or floating list items.
+
+Inline List Items
+One way to build a horizontal navigation bar is to specify the <li> elements as inline, in addition to the "standard" code from the previous page:
+
+Example explained:
+
+display: inline; - By default, <li> elements are block elements. Here, we remove the line breaks before and after each list item, to display them on one line
+Floating List Items
+Another way of creating a horizontal navigation bar is to float the <li> elements, and specify a layout for the navigation links
+
+    Example explained:
+
+float: left; - Use float to get block elements to float next to each other
+display: block; - Allows us to specify padding (and height, width, margins, etc. if you want)
+padding: 8px; - Specify some padding between each <a> element, to make them look good
+background-color: #dddddd; - Add a gray background-color to each <a> element
+Tip: Add the background-color to <ul> instead of each <a> element if you want a full-width background color
+
+
+ -->

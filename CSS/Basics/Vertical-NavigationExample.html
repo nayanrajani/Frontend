@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navigation Bars</title>
+    <style>
+      ul.example1 {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 200px;
+        background-color: #f1f1f1;
+      }
+
+      li.example1 a {
+        display: block;
+        color: #000;
+        padding: 8px 16px;
+        text-decoration: none;
+      }
+
+      /* Change the link color on hover */
+      li.example1 a:hover {
+        background-color: #555;
+        color: white;
+      }
+
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 200px;
+        background-color: #f1f1f1;
+      }
+
+      li a {
+        display: block;
+        color: #000;
+        padding: 8px 16px;
+        text-decoration: none;
+      }
+
+      li a.active {
+        background-color: #04aa6d;
+        color: white;
+      }
+
+      li a:hover:not(.active) {
+        background-color: #555;
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Simple Navigation Bar</h1>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#home">News</a></li>
+      <li><a href="#home">Contact</a></li>
+      <li><a href="#home">About</a></li>
+    </ul>
+    <p>
+      Note: We use href="#" for test links. In a real web site this would be
+      URLs.
+    </p>
+
+    <h2>Vertical Navigation Bar example1</h2>
+
+    <ul class="example1">
+      <li class="example1"><a href="#home">Home</a></li>
+      <li class="example1"><a href="#news">News</a></li>
+      <li class="example1"><a href="#contact">Contact</a></li>
+      <li class="example1"><a href="#about">About</a></li>
+    </ul>
+
+    <h2>Active/Current Navigation Link example2</h2>
+    <p>
+      Add an "active" class to the current link to let the user know which page
+      he/she is on
+    </p>
+
+    <ul>
+      <li><a class="active" href="#home">Home</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+
+
+  </body>
+</html>
+
+<!-- 
+    Navigation Bars
+Having easy-to-use navigation is important for any web site.
+
+With CSS you can transform boring HTML menus into good-looking navigation bars.
+
+Navigation Bar = List of Links
+A navigation bar needs standard HTML as a base.
+
+In our examples we will build the navigation bar from a standard HTML list.
+
+A navigation bar is basically a list of links, so using the <ul> and <li> elements makes perfect sense
+
+Example explained:
+
+list-style-type: none; - Removes the bullets. A navigation bar does not need list markers
+Set margin: 0; and padding: 0; to remove browser default settings
+The code in the example above is the standard code used in both vertical, and horizontal navigation bars, which you will learn more about in the next chapters.
+
+CSS Vertical Navigation Bar
+Vertical Navigation Bar
+
+Example explained:
+
+display: block; - Displaying the links as block elements makes the whole link area clickable (not just the text), and it allows us to specify the width (and padding, margin, height, etc. if you want)
+width: 60px; - Block elements take up the full width available by default. We want to specify a 60 pixels width
+You can also set the width of <ul>, and remove the width of <a>, as they will take up the full width available when displayed as block elements. This will produce the same result as our previous example
+
+Vertical Navigation Bar Examples
+Create a basic vertical navigation bar with a gray background color and change the background color of the links when the user moves the mouse over them
+ -->

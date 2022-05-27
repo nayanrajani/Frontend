@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Opacity/Transparency</title>
+    <style>
+      img.forest {
+        opacity: 0.5;
+      }
+      img.Jungle {
+        opacity: 0.5;
+      }
+      img.Jungle:hover {
+        opacity: 1;
+      }
+      div {
+        background-color: #4caf50;
+        padding: 10px;
+      }
+
+      div.first {
+        opacity: 0.1;
+      }
+
+      div.second {
+        opacity: 0.3;
+      }
+
+      div.third {
+        opacity: 0.6;
+      }
+
+      div.background {
+        background: url(Images/opacity.jpg) repeat;
+        border: 2px solid black;
+      }
+
+      div.transbox {
+        margin: 30px;
+        background-color: #ffffff;
+        border: 1px solid black;
+        opacity: 0.6;
+      }
+
+      div.transbox p {
+        margin: 5%;
+        font-weight: bold;
+        color: #000000;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Image Transparency</h1>
+    <p>
+      The opacity property specifies the transparency of an element. The lower
+      the value, the more transparent:
+    </p>
+    <p>Image with 50% opacity:</p>
+
+    <img
+      class="forest"
+      src="Images/opacity.jpg"
+      alt="Way to Forest"
+      width="170"
+      height="100"
+    />
+
+    <p>
+      The opacity property is often used together with the :hover selector to
+      change the opacity on mouse-over:
+    </p>
+
+    <img
+      class="Jungle"
+      src="Images/opacity.jpg"
+      alt="Way to Jungle"
+      width="170"
+      height="100"
+    />
+    <img
+      class="Jungle"
+      src="Images/opacity1.jpg"
+      alt="Way to River"
+      width="170"
+      height="100"
+    />
+    <img
+      class="Jungle"
+      src="Images/opacity2.jpg"
+      alt="Way to shore"
+      width="170"
+      height="100"
+    />
+
+    <h1>Transparent Box</h1>
+    <p>
+      When using the opacity property to add transparency to the background of
+      an element, all of its child elements become transparent as well. This can
+      make the text inside a fully transparent element hard to read:
+    </p>
+
+    <div class="first"><p>opacity 0.1</p></div>
+    <div class="second"><p>opacity 0.3</p></div>
+    <div class="third"><p>opacity 0.6</p></div>
+    <div><p>opacity 1 (default)</p></div>
+    <div class="background">
+      <div class="transbox">
+        <p>This is some text that is placed in the transparent box.</p>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- 
+    CSS Opacity / Transparency
+The opacity property specifies the opacity/transparency of an element.
+
+Transparent Image
+The opacity property can take a value from 0.0 - 1.0. The lower value, the more transparent
+
+Transparent Hover Effect
+The opacity property is often used together with the :hover selector to change the opacity on mouse-over
+
+Transparent Box
+When using the opacity property to add transparency to the background of an element, all of its child elements inherit the same transparency. This can make the text inside a fully transparent element hard to read
+
+Transparency using RGBA
+If you do not want to apply opacity to child elements, like in our example above, use RGBA color values. The following example sets the opacity for the background color and not the text
+
+You learned from our CSS Colors Chapter, that you can use RGB as a color value. In addition to RGB, you can use an RGB color value with an alpha channel (RGBA) - which specifies the opacity for a color.
+
+An RGBA color value is specified with: rgba(red, green, blue, alpha). The alpha parameter is a number between 0.0 (fully transparent) and 1.0 (fully opaque).
+
+
+ -->
