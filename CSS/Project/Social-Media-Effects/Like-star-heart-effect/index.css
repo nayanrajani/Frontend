@@ -1,0 +1,49 @@
+body {
+    box-sizing: border-box;
+    background-color: #e9e5e5;
+}
+.container {
+    display: flex;
+}
+
+.icon {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 2em;
+    height: 2em;
+    color: rgb(207,207,207);
+    font-size: 2.5em;
+    margin: 1rem;
+    padding: 10px;
+    border-radius: 20px;
+    background: #e9e5e5;
+    box-shadow: 12px 12px 24px #c6c3c3, -12px -12px 24px #ffffff;
+}
+
+.heart:hover {
+    color: rgb(241, 98, 170);
+    cursor: pointer;
+}
+.like:hover {
+    color: rgb(141, 166, 235);
+    cursor: pointer;
+}
+.star:hover {
+    color: rgb(236, 190, 36);
+    cursor: pointer;
+}
+
+.heart:active,
+.like:active,
+.star:active{
+    transform: scale(1.6);
+    transition: box-shadow .3s, transform 6s cubic-bezier(0.5, 4, 1, 2);
+
+    box-shadow: inset -2px -2px 8px rgba(255, 255, 255, 1),
+    inset -2px -2px 12px rgba(255, 255, 255, 0.5),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.1),
+    inset 2px 2px 8px rgba(0, 0, 0, 0.15),
+
+}
