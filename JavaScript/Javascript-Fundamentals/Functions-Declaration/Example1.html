@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let userName = prompt("UserName?", ""); //Global Declaration
+      function showMessage() {
+        let secreteMessage = "Hello! from Javascript!!";
+        let secreteMessage1 = "Hello, " + userName;
+
+        alert("Hello");
+        alert(secreteMessage);
+        alert(secreteMessage1); //Global Declaration
+      }
+      showMessage();
+      // alert(secreteMessage); //Error, because secreteMessage is declared inside the function.
+      // Second
+      let userName1 = "John";
+
+      function showMessage1() {
+        userName1 = "Bob"; // (1) changed the outer variable
+
+        let message = "Hello, " + userName1;
+        alert(message);
+      }
+
+      alert(userName1); // John before the function call
+
+      showMessage1();
+
+      alert(userName1); // Bob, the value was modified by the function
+    </script>
+  </body>
+</html>
