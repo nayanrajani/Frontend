@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <script>
+        // Comparison by reference
+        let a = {};
+        let b = a;
+
+        alert(a==b);
+        alert(a===b);
+
+        //And here two independent objects are not equal, even though they look alike (both are empty):
+
+        let c = {};
+        let d ={};
+
+        alert(c==d);
+    </script>
+</html>
