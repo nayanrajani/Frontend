@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<script>
+    "use strict";
+    let user = {
+        name: "John",
+        age: 30
+    };
+
+    // Literals and properties
+    alert(user.name);
+    alert(user.age);
+
+    //Square brackets
+
+    // set
+    user["likes birds"] = true;
+
+    // get
+    alert(user["likes birds"]); // true
+
+    // delete
+    delete user["likes birds"];
+
+    //in a precise way for square brackets
+    let key = prompt("What info you want?", "");
+
+    alert(user[key]);
+
+    // Property value shorthand
+
+    function makeUser(name, age) {
+        return {
+            name: name,
+            age: age,
+        };
+    }
+
+    let muser = makeUser("Nayan", 24);
+    alert(muser.name);
+    alert(muser.age);
+
+    // Property names limitations
+    /*
+    As we already know, a variable cannot have a name equal to one of the language-reserved words like “for”, “let”, “return” etc.
+
+    But for an object property, there’s no such restriction:
+    */
+
+    let obj = {
+        for: 1,
+        let: 2,
+        return: 3,
+        0: "Text"
+    };
+
+    alert(obj.for + obj.let + obj.return);
+    alert(obj[0]);
+
+    // Property existence test, “in” operator
+
+    let objec = {}
+    alert(objec.noSuchProperty === undefined);
+
+    objec = {
+        name: "Rajani",
+        age: 24
+    }
+
+    alert("age" in objec);
+    alert("okok" in objec);
+
+    //The “for…in” loop
+    //For instance, let’s output all properties of user:
+
+    let loser = {
+        name: "John",
+        age: 30,
+        isAdmin: true
+    };
+
+    for (let key in loser) {
+        //keys
+        alert(key);
+        //values for the keys
+        alert(loser[key]);
+    }
+
+    //Ordered like an object
+    let codes = {
+        "49": "Germany",
+        "41": "Switzerland",
+        "44": "Great Britain",
+        // ..,
+        "1": "USA"
+    };
+
+    for (let code in codes) {
+        alert(code); // 1, 41, 44, 49
+    }
+
+</script>
+
+</html>
