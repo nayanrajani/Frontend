@@ -14,5 +14,38 @@
         let d ={};
 
         alert(c==d);
+
+        // Cloning and merging, Object.assign
+
+        let userName = {
+            name:'John',
+            age:30
+        }
+
+        let clone = {};
+
+        for (let key in userName) {
+            clone[key] = userName[key];
+        }
+
+        clone.name = "pete";
+        alert(clone.name);
+        alert(userName.name);
+
+        // Object.assign
+        Object.assign(userName, {age:35});
+        alert(`the age of John changed to ${userName.age}` )
+
+        // Nested cloning
+        let nested = {
+            name:"John",
+            sizes: {
+                height: 182,
+                width: 50
+            }
+        };
+
+        alert(nested.sizes.height);
+        alert(nested.sizes.width);
     </script>
 </html>
