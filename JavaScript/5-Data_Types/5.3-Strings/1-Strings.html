@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <script>
+        // Quotes
+
+        let single = 'Single-quoted';
+        let double = "Double-quoted";
+        let backticks = `backticks`;
+        
+        // Single and double quotes are essentially the same. Backticks, however, allow us to embed any expression into the string, by wrapping it in ${…}:
+
+        function sum(a, b) {
+        return a + b;
+        }
+
+        alert(`1 + 2 = ${sum(1, 2)}.`); // 1 + 2 = 3.
+
+        // Another advantage of using backticks is that they allow a string to span multiple lines:
+
+        let guestlist = `Guests:
+        * John
+        * Pete
+        * Mary
+        `;
+        // Looks natural, right? But single or double quotes do not work this way.
+        alert(guestlist);
+
+        // Special-Characters
+        let guestlist1 = "Guests:\n * John\n * Pete\n * Mary";
+
+        alert(guestlist1);
+
+        // Examples with Unicode:
+        alert("\u00A9");
+        alert( "\u{20331}" ); // 佫, a rare Chinese hieroglyph (long Unicode)
+        alert( "\u{1F60D}" ); // 😍, a smiling face symbol (another long Unicode)
+
+        // Example
+        alert( 'I\'m the Walrus!' ); // I'm the Walrus!
+
+        // String length
+        let my = "My Name is Nayan";
+
+        alert(my.length);
+
+        // Accessing characters
+        //first character
+        alert(my[0]);
+        alert(my.charAt(0));
+
+        //last character
+        alert(my[my.length - 1]);
+
+    </script>
+</html>

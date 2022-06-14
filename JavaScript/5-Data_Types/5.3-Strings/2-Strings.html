@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <script>
+        // Strings are immutable
+
+        let str = "Hi";
+        // str[0] = 'h'; //error
+
+        // Better way
+        str = 'h' + str[1]; // replace the string
+        alert( str ); // hi
+
+        // Changing the case
+        alert(str.toUpperCase());
+        alert(str.toLowerCase());
+        alert( 'Interface'[0].toLowerCase() ); // 'i'
+
+        // Searching for a substring
+        // str.indexOf
+
+        alert( str.indexOf('Widget') ); // 0, because 'Widget' is found at the beginning
+        alert( str.indexOf('widget') ); // -1, not found, the search is case-sensitive
+
+        alert( str.indexOf("id") ); // 1, "id" is found at the position 1 (..idget with id)
+
+
+        if (str.indexOf("Widget")) {
+            alert("We found it"); // doesn't work!
+        }
+        // The bitwise NOT trick
+        alert( ~2 ); // -3, the same as -(2+1)
+        alert( ~1 ); // -2, the same as -(1+1)
+        alert( ~0 ); // -1, the same as -(0+1)
+        alert( ~-1 ); // 0, the same as -(-1+1)
+
+        // includes, startsWith, endsWith
+        // Includes
+        alert( "Widget with id".includes("Widget") ); // true
+
+        alert( "Hello".includes("Bye") ); // false
+        alert( "Widget".includes("id") ); // true
+        alert( "Widget".includes("id", 3) ); // false, from position 3 there is no "id"
+
+        // startswith & endsWith
+        alert( "Widget".startsWith("Wid") ); // true, "Widget" starts with "Wid"
+        alert( "Widget".endsWith("get") ); // true, "Widget" ends with "get"
+
+    </script>
+</html>
