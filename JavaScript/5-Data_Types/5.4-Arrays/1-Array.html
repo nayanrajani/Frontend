@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <script>
+        /*
+        Declaration
+        There are two syntaxes for creating an empty array:
+        */
+        let arr = new Array();
+        let arr1 = [];
+
+        // Mostly used the second one
+        let fruits = ["Apple", "Orange","Plum"];
+
+        alert(fruits[0]);
+        alert(fruits[1]);
+        alert(fruits[2]);
+
+        // We can replace an element
+        fruits[2] = 'Banana';
+        alert(fruits[2]);
+
+        // Add a new one
+        fruits[3] = "kandha";
+        alert(fruits[3]);
+
+        // length of fruits
+        alert(fruits.length);
+
+        // list all at once
+        alert(fruits);
+
+        // Array can store element of any type
+        let arr2 = ["apple", {name: "nayan"}, true, function() {alert("hello from function");}];
+
+        alert(arr2[1].name); //nayan
+        alert(arr2);
+
+        arr2[3]();
+
+        // Get last elements with “at”
+        alert(fruits.at(-1));
+
+        // Methods pop/push, shift/unshift
+        
+        // -> Methods that work with the end of the array:
+        // pop 
+        alert(fruits.pop());
+        alert(fruits);
+
+        // push
+        fruits.push("pear");
+        alert(fruits);
+
+        // ->Methods that work with the beginning of the array:
+        // shift -> Extracts the first element of the array and returns it:
+        alert(fruits.shift());
+        alert(fruits);
+
+        // unshift-> Add the element to the beginning of the array:
+
+        fruits.unshift("Apple");
+        alert(fruits);
+    </script>
+</html>

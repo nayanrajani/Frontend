@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <script>
+        let arr = ["a","b"];
+
+        arr.push(function(){
+            alert(this);
+        });
+
+        arr[2]();
+    </script>
+</html>
+<!-- 
+    Calling in an array context
+importance: 5
+What is the result? Why?
+
+let arr = ["a", "b"];
+
+arr.push(function() {
+  alert( this );
+});
+
+arr[2](); // ?
+ -->
