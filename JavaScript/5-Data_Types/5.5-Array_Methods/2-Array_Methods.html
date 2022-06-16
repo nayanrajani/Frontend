@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <script>
+        // Searching in array
+        // indexOf/lastIndexOf and includes
+        let arr = [1,0,false]
+        alert(arr.indexOf(0));
+        alert(arr.indexOf(false));
+        alert(arr.indexOf(null));
+        alert(arr.indexOf(1));
+
+        // lastindexof -> The method arr.lastIndexOf is the same as indexOf, but looks for from right to left
+        let fruits = ["apple", "orange", "apple"];
+        alert(fruits.indexOf("apple"));
+        alert(fruits.lastIndexOf("apple"));
+
+        // includes
+        const arrr = [NaN];
+        alert( arrr.indexOf(NaN) ); // -1 (wrong, should be 0)
+        alert( arrr.includes(NaN) );// true (correct)
+
+        // find and findIndex/findLastIndex
+        let users = [
+            {id:1, name:"Nayan"},
+            {id:2, name:"Vitthal"},
+            {id:3, name:"Anurag"},
+            {id:4, name:"Nayan"},
+        ];
+
+        let find = +prompt("Enter id to search", '');
+
+        let user = users.find(item => item.id == find);
+        alert(user.name);
+
+        // Find the index of the first Nayan
+        alert(users.findIndex(user => user.name == 'Nayan')); // 0
+
+        // Find the index of the last John
+        alert(users.findLastIndex(user => user.name == 'Nayan')); // 3
+    </script>
+</html>
