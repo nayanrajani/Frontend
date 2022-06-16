@@ -8,5 +8,39 @@
         alert(arr);
 
         // split and join
+        let names = "Nayan, vitthal, Anurag";
+        let arr1 = names.split(', ');
+
+        for (let name of arr1){
+            alert(`A message to ${name}`);
+        }
+
+        // Split into letters
+        let str = "test";
+        alert(str.split(''));
+
+        // join
+        let vtr = arr1.join(';');
+        alert(vtr);
+
+        // reduce/reduceRight
+        let yrr = [1,2,3,4,5];
+        let result = yrr.reduce((sum, current) => sum +current, 0); //we can remove the 0 as well
+        alert(result);
+        // The method arr.reduceRight does the same, but goes from right to left.
+
+        /* 
+        Array.isArray
+        Arrays do not form a separate language type. They are based on objects.
+        So typeof does not help to distinguish a plain object from an array:
+        */
+        alert(typeof {}); // object
+        alert(typeof []); // same
+
+        /*
+        …But arrays are used so often that there’s a special method for that: Array.isArray(value). It returns true if the value is an array, and false otherwise.
+        */ 
+        alert(Array.isArray({})); // false
+        alert(Array.isArray([])); // true
     </script>
 </html>
