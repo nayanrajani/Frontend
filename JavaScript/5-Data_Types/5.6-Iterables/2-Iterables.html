@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <script>
+        // Calling an iterator explicitly
+        let str = "Hello";
+        let iterator = str[Symbol.iterator]();
+
+        while(true){
+            let result = iterator.next();
+            if(result.done) break;
+            alert(result.value);
+        }
+        alert("Iterables and array-likes");
+        // Iterables and array-likes
+        
+    </script>
+</html>
