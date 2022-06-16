@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <script>
+        let map = new Map();
+
+        map.set('1', 'str1');
+        map.set(1, 'num1');
+        map.set(true, 'bool1');
+
+        alert(map.get(1));
+        alert(map.get('1'));
+        alert(map.size);
+
+        // Map can also use objects as keys.
+        let john = {name: "john"};
+
+        // for every user, let's store their visits count
+        let visitsCountMap = new Map();
+
+        // john is the key for the map
+        visitsCountMap.set(john,123);
+        alert(visitsCountMap.get(john));
+
+        alert("Iteration over Map");
+        // Iteration over Map
+
+        let recipeMap = new Map([
+            ['cucumber', 500],
+            ['tomatoes',350],
+            ['onion', 50]
+        ]);
+
+        // iterate over keys(vegetables)
+        for (let vegetable of recipeMap.keys()){
+            alert(vegetable);
+        }
+
+        //iterate over values
+        for (let amount of recipeMap.values()){
+            alert(amount);
+        }
+
+        //iterate over [key, value] entries
+        for(let entry of recipeMap){
+            alert(entry);
+        }
+        // runs the function for each (key, value) pair
+        recipeMap.forEach( (value, key, map) => {
+        alert(`${key}: ${value}`); // cucumber: 500 etc
+        });
+
+    </script>
+</html>
+
+<!-- 
+    Map and Set
+Till now, we’ve learned about the following complex data structures:
+
+Objects are used for storing keyed collections.
+Arrays are used for storing ordered collections.
+But that’s not enough for real life. That’s why Map and Set also exist.
+
+Map
+Map is a collection of keyed data items, just like an Object. But the main difference is that Map allows keys of any type.
+
+Methods and properties are:
+
+new Map() – creates the map.
+map.set(key, value) – stores the value by the key.
+map.get(key) – returns the value by the key, undefined if key doesn’t exist in map.
+map.has(key) – returns true if the key exists, false otherwise.
+map.delete(key) – removes the value by the key.
+map.clear() – removes everything from the map.
+map.size – returns the current element count.
+
+Iteration over Map
+For looping over a map, there are 3 methods:
+
+map.keys() – returns an iterable for keys,
+map.values() – returns an iterable for values,
+map.entries() – returns an iterable for entries [key, value], it’s used by default in for..of.
+ -->

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <script>
+        //Object.entries: Map from Object
+        let obj = {
+            name: "john",
+            age: 30
+        };
+
+        let map = new Map(Object.entries(obj));
+
+        alert(map.get('name'));
+
+        // Object.fromEntries: Object from Map
+        let chap = new Map();
+        chap.set('banana', 1);
+        chap.set('orange',2);
+        chap.set('meat',4);
+
+        let objj = Object.fromEntries(chap.entries());
+
+        alert(objj.orange);
+
+        alert("Set");
+        // Set
+        let set = new Set();
+
+        let john = { name: "john"};
+        let pete = {name: "Pete"};
+        let mary = {name: "Mary"};
+
+        // visits, some users come multiple times
+        set.add(john);
+        set.add(pete);
+        set.add(mary);
+        set.add(pete);
+        set.add(mary);
+        set.add(john);
+
+        // set keeps only unique values
+        alert( set.size ); // 3
+
+        for (let user of set){
+            alert(user.name);
+        }
+
+        // Iteration over Set
+        alert("Iteration over Set");
+        let bet = new Set(["Orange", "Apples", "Banana"]);
+        for(let value of bet) alert(value);
+        // the same with forEach:
+
+        bet.forEach((value, valueAgain, bet) => {
+            alert(value);
+        })
+    </script>
+</html>
+
+<!-- 
+    Set
+A Set is a special type collection – “set of values” (without keys), where each value may occur only once.
+
+Its main methods are:
+
+new Set(iterable) – creates the set, and if an iterable object is provided (usually an array), copies values from it into the set.
+set.add(value) – adds a value, returns the set itself.
+set.delete(value) – removes the value, returns true if value existed at the moment of the call, otherwise false.
+set.has(value) – returns true if the value exists in the set, otherwise false.
+set.clear() – removes everything from the set.
+set.size – is the elements count.
+The main feature is that repeated calls of set.add(value) with the same value don’t do anything. That’s the reason why each value appears in a Set only once.
+ -->
