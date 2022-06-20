@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <script>
+    let weakMap = new WeakMap();
+
+    let obj1 = {};
+
+    weakMap.set(obj1, "ok");
+
+    weakMap.set("test", "whoops");
+
+    /*
+        Now, if we use an object as the key in it, and there are no other references to that object – it will be removed from memory (and from the map) automatically.
+
+        */
+    let john = { name: "John" };
+    weakMap.set(john, ".hello.");
+
+    john = null;
+    /*
+    Compare it with the regular Map example above. Now if john only exists as the key of WeakMap – it will be automatically deleted from the map (and memory).
+    */
+    /*
+Use case: caching
+Another common example is caching. We can store (“cache”) results from a function, so that future calls on the same object can reuse it.
+
+To achieve that, we can use Map (not optimal scenario):
+*/
+    // 📁 cache.js
+    let cache = new Map();
+
+    // calculate and remember the result
+    function process(obj) {
+      if (!cache.has(obj)) {
+        let result = /* calculations of the result for */ obj;
+
+        cache.set(obj, result);
+      }
+
+      return cache.get(obj);
+    }
+
+    // Now we use process() in another file:
+
+    // 📁 main.js
+    let obj = {
+      /* let's say we have an object */
+    };
+
+    let result1 = process(obj); // calculated
+
+    // ...later, from another place of the code...
+    let result2 = process(obj); // remembered result taken from cache
+
+    // ...later, when the object is not needed any more:
+    obj = null;
+
+    alert(cache.size); // 1 (Ouch! The object is still in cache, taking memory!)
+
+    /*
+    If we replace Map with WeakMap, then this problem disappears. The cached result will be removed from memory automatically after the object gets garbage collected.
+    */
+    // 📁 cache.js
+    let cachee = new WeakMap();
+
+    // calculate and remember the result
+    function process(obj) {
+      if (!cachee.has(obj)) {
+        let result = /* calculate the result for */ obj;
+
+        cachee.set(obj, result);
+      }
+
+      return cachee.get(obj);
+    }
+
+    // 📁 main.js
+    let obj2 = {
+      /* some object */
+    };
+
+    let result12 = process(obj);
+    let result21 = process(obj);
+
+    // ...later, when the object is not needed any more:
+    obj2 = null;
+    alert(cachee.size); 
+
+    // Can't get cache.size, as it's a WeakMap,
+    // but it's 0 or soon be 0
+    // When obj gets garbage collected, cached data will be removed as well
+  </script>
+</html>
+
+<!-- 
+  WeakMap
+The first difference between Map and WeakMap is that keys must be objects, not primitive values:
+
+Compare it with the regular Map example above. Now if john only exists as the key of WeakMap – it will be automatically deleted from the map (and memory).
+
+WeakMap does not support iteration and methods keys(), values(), entries(), so there’s no way to get all keys or values from it.
+
+WeakMap has only the following methods:
+
+weakMap.get(key)
+weakMap.set(key, value)
+weakMap.delete(key)
+weakMap.has(key)
+
+ -->
