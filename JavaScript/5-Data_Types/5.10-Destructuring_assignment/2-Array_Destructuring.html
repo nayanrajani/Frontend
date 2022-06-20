@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<script>
+    /*
+    The rest ‘…’
+    Usually, if the array is longer than the list at the left, the “extra” items are omitted.
+
+    For example, here only two items are taken, and the rest is just ignored:
+    */
+    let [name1, name2, ...rest] = ["Julius", "Caesar", "Consul", "of the Roman Republic"];
+
+    alert(name1);
+    alert(name2);
+    alert(...rest);
+    alert(rest[0]);
+    alert(rest[1]);
+
+    // Nested Destructuring
+    let options = {
+        size: {
+            width: 100,
+            height: 200
+        },
+        items: ["Cake", "Donut"],
+        extra: true
+    };
+
+    // destructuring assignment split in multiple lines for clarity
+    let {
+        size: { // put size here
+            width,
+            height
+        },
+        items: [item1, item2], // assign items here
+        title = "Menu" // not present in the object (default value is used)
+    } = options;
+
+    alert(title);  // Menu
+    alert(width);  // 100
+    alert(height); // 200
+    alert(item1);  // Cake
+    alert(item2);  // Donut
+
+    // Smart function parameters
+    // we pass object to function
+    let options1 = {
+        title:"My menu",
+        items: ["Item1", "Item2"]
+    };
+
+    function showMenu({title = "untitled", width = 200, height = 100, items=[]}){
+        alert(`${title} ${width} ${height}`);
+        alert(items);
+    }
+    showMenu(options1);
+</script>
+
+</html>

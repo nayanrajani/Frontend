@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <script>
+        let arr = ["John", "Smith"];
+        // destructuring assignment
+        // sets firstName = arr[0]
+        // and surname = arr[1]
+
+        let [firstName, surname] = arr;
+
+        alert(firstName);
+        alert(surname);
+
+        // OR
+        let [firstName1, surname1] = "John Smith".split(' ');
+        alert(firstName1); // John
+        alert(surname1);  // Smith
+
+        // “Destructuring” does not mean “destructive”.
+
+        // let [firstName, surname] = arr;
+        let firstName2 = arr[0];
+        let surname2 = arr[1];
+
+        // Ignore elements using commas
+        let [firstName3, , title] = ["Julius", "Caesar", "Consul", "of the Roman Republic"];
+
+        alert( title ); // Consul
+
+        // Works with any iterable on the right-side
+        let [a, b, c] = "abc"; // ["a", "b", "c"]
+        let [one, two, three] = new Set([1, 2, 3]); 
+
+        // 
+        let user = {};
+        [user.name, user.surname] = "John Smith".split(' ');
+
+        alert(user.name);
+        alert(user.surname);
+
+        // Looping with Entries
+        let user1 = {
+            name: "Nayan",
+            age: 24,
+        };
+
+        for(let [key, value] of Object.entries(user1)) {
+            alert(`${key}:${value}`);
+        }
+
+        // The similar code for a Map is simpler, as it’s iterable:
+        let user2 = new Map();
+        user2.set("Name", "John");
+        user2.set("Age", "24");
+
+        // // Map iterates as [key, value] pairs, very convenient for destructuring
+        for (let [key, value] of user2){
+            alert(`${key}:${value}`);
+        }
+    </script>
+</html>
