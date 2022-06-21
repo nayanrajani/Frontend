@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<script>
+    // Date to number, date diff
+    // When a Date object is converted to number, it becomes the timestamp same as date.getTime():
+    let date = new Date();
+    alert(+date);
+    // The important side effect: dates can be subtracted, the result is their difference in ms.
+    // That can be used for time measurements:
+    let start = new Date();
+
+    // do the job
+    for (let i = 0; i < 100000; i++) {
+        let doSomething = i * i * i;
+    }
+
+    let end = new Date();
+    alert(`The Looping took ${end - start} ms`);
+
+    // Benchmarking
+    function diffSubtract(date1, date2) {
+        return date2 - date1;
+    }
+
+    function diffGetTime(date1, date2) {
+        return date2.getTime() - date1.getTime();
+    }
+
+    function bench(f) {
+        let date1 = new Date(0);
+        let date2 = new Date();
+
+        let start = Date.now();
+        for (let i = 0; i < 100000; i++) f(date1, date2);
+        return Date.now() - start;
+    }
+
+    alert('Time of diffSubtract: ' + bench(diffSubtract) + 'ms');
+    alert('Time of diffGetTime: ' + bench(diffGetTime) + 'ms');
+
+    // Wow! Using getTime() is so much faster! That’s because there’s no type conversion, it is much easier for engines to optimize. Okay, we have something. But that’s not a good benchmark yet.
+
+    // Date.parse from a string
+    let ms  = Date.parse('2012-01-26T13:51:50.417-07:00');
+    alert(ms);
+    // We can instantly create a new Date object from the timestamp:
+
+    let date2 = new Date( Date.parse('2012-01-26T13:51:50.417-07:00') );
+
+    alert(date2);
+</script>
+
+</html>

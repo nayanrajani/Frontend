@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<script>
+    // Date and time
+    /*
+    Creation
+    To create a new Date object call new Date() with one of the following arguments:
+
+    new Date()
+    Without arguments – create a Date object for the current date and time:
+    */
+
+    let now = new Date();
+    alert(now);
+
+    // new Date(milliseconds)
+    // 0 means 01.01.1970 UTC+0
+    let Jan01_1970 = new Date(0);
+    alert(Jan01_1970);
+
+    // now add 24 hours, get 02.01.1970 UTC+0
+    let Jan02_1970 = new Date(24 * 3600 * 1000);
+    alert(Jan02_1970);
+
+    // new Date(datestring)
+    let date1 = new Date("1998-09-27");
+    alert(date1);
+
+    // new Date(year, month, date, hours, minutes, seconds, ms)
+    alert(new Date(2011, 0, 1, 0, 0, 0, 0)); // 1 Jan 2011, 00:00:00
+    new Date(2011, 0, 1); // the same, hours etc are 0 by default
+
+    /*
+    Access date components
+    There are methods to access the year, month and so on from the Date object:
+
+    getFullYear()
+    Get the year (4 digits)
+    getMonth()
+    Get the month, from 0 to 11.
+    getDate()
+    Get the day of month, from 1 to 31, the name of the method does look a little bit strange.
+    getHours(), getMinutes(), getSeconds(), getMilliseconds()
+    Get the corresponding time components.
+
+    Additionally, we can get a day of week:
+
+    getDay()
+    Get the day of week, from 0 (Sunday) to 6 (Saturday). The first day is always Sunday, in some countries that’s not so, but can’t be changed.
+    All the methods above return the components relative to the local time zone.
+
+    There are also their UTC-counterparts, that return day, month, year and so on for the time zone UTC+0: getUTCFullYear(), getUTCMonth(), getUTCDay(). Just insert the "UTC" right after "get".
+
+    If your local time zone is shifted relative to UTC, then the code below shows different hours:
+    */
+
+    //Current Date
+    let date = new Date();
+    alert(date.getHours());
+    alert(date.getUTCHours());
+
+    // Current time
+    alert(date.getTime());
+    alert(date.getTimezoneOffset());
+
+    // Setting date components
+    /*
+    The following methods allow to set date/time components:
+
+    setFullYear(year, [month], [date])
+    setMonth(month, [date])
+    setDate(date)
+    setHours(hour, [min], [sec], [ms])
+    setMinutes(min, [sec], [ms])
+    setSeconds(sec, [ms])
+    setMilliseconds(ms)
+    setTime(milliseconds) 
+    */ 
+
+    let today = new Date();
+    today.setHours(0);
+    alert(today);
+
+    today.setHours(0,0,0,0);
+    alert(today);
+    
+    // Autocorrection
+    let date2 = new Date(2013,0,32); // 32 Jan 2013 ?!?
+    alert(date2); // ...is 1st Feb 2013!    
+</script>
+
+</html>
