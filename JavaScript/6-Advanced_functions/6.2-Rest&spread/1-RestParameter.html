@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <script>
+        // Rest parameters ...
+        function sumAll(...args){
+            let sum = 0;
+            for (let arg of args){
+                sum += arg;
+                
+            }
+            return sum;
+        }
+        alert(sumAll(1));
+        alert(sumAll(1,5));
+        alert(sumAll(1,5,8,9));
+
+    </script>
+</html>

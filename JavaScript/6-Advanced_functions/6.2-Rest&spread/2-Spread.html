@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <script>
+        // Spread syntax
+        /* error
+        let arr = [3, 5, 1];
+        alert( Math.max(arr) ); // NaN
+        */
+       let arr = [3,5,1];
+       alert(Math.max(...arr));
+
+       let str = "hello";
+       alert([...str]);
+       alert( Array.from(str) ); // H,e,l,l,o
+
+    //    Copy an array/object
+    let arrCopy = [...arr];
+
+    alert(JSON.stringify(arr) === JSON.stringify(arrCopy));
+
+    alert(arr == arrCopy);
+
+    arr.push(4);
+    alert(arr);
+    alert(arrCopy);
+    </script>
+</html>
