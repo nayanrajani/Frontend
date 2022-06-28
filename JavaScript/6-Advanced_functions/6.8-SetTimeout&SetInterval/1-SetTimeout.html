@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <script>
+        // setTimeout
+        // For instance, this code calls sayHi() after one second:
+        function sayHi(){
+            alert('Hello');
+        }
+
+        setTimeout(sayHi, 1000);
+
+        // With arguments:
+        function sayHii(phrase, who){
+            alert(phrase + ' , ' + who);
+        }
+
+        setTimeout(sayHii, 3000, "Hello", "Nayan");
+
+        // use arrow functions instead of them, like this:
+        setTimeout(() => alert('Hello'), 1000);
+
+        let timerId = setTimeout(() => alert("Never Happens"), 1000);
+        alert(timerId);
+
+        clearTimeout(timerId);
+        alert(timerId);
+    </script>
+</html>
