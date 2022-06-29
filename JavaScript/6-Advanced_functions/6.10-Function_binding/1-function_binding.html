@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<script>
+    alert("Losing “this”");
+    /*
+    We’ve already seen examples of losing this. Once a method is passed somewhere separately from the object – this is lost.
+
+    Here’s how it may happen with setTimeout:
+    */
+    let user = {
+        firstName: "John",
+        sayHi() {
+            alert(`Hello, ${this.firstName}`);
+        }
+    }
+    setTimeout(user.sayHi, 1000); // Hello, undefined!
+
+    // alert("Solution 1: a wrapper");
+    //The simplest solution is to use a wrapping function:
+    let user1 = {
+        firstName: "John",
+        sayHi() {
+            alert(`Hello, ${this.firstName}`);
+        }
+    };
+    setTimeout(function () {
+        user1.sayHi();
+    }, 1000);
+
+    // alert("Solution 2: bind");
+    // Functions provide a built-in method bind that allows to fix this.
+    let user2 = {
+        firstName: "Nayan"
+    };
+    function func(){
+        alert(this.firstName);
+    }
+    let funcUser = func.bind(user2);
+    funcUser();
+
+</script>
+
+</html>
