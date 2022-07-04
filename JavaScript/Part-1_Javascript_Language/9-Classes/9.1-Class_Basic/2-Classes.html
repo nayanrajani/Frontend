@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <script>
+        // Class Expression
+        // If a class expression has a name, it’s visible inside the class only:
+
+        let User = class MyClass {
+            sayHi(){
+                alert(MyClass);
+            }
+        };
+        new User().sayHi();
+
+        function makeClass(pharse){
+            return class{
+                sayHi1(){
+                    alert(pharse);
+                }
+            };
+        }
+        let User1 = makeClass("helloooooo");
+        new User1().sayHi1();
+
+        // Getters/setters
+        class Buser{
+            constructor(name){
+                    // invokes the setter
+                this.name=name;
+            }
+
+            get name(){
+                return this._name;
+            }
+
+            set name(value){
+                if(value.length < 4){
+                    alert("Name is too Short");
+                    return;
+                }
+                this._name = value;
+            }
+        }
+
+        let buser = new Buser("nam");
+        alert(buser.name);
+
+        buser = new Buser("");
+    </script>
+</html>
