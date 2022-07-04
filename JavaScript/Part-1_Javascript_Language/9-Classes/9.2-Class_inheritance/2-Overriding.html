@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<script>
+    // Overriding a method
+    class Animal {
+
+        constructor(name) {
+            this.speed = 0;
+            this.name = name;
+        }
+
+        run(speed) {
+            this.speed = speed;
+            alert(`${this.name} runs with speed ${this.speed}.`);
+        }
+
+        stop() {
+            this.speed = 0;
+            alert(`${this.name} stands still.`);
+        }
+
+    }
+
+    class Rabbit extends Animal {
+        hide() {
+            alert(`${this.name} hides!`);
+        }
+
+        stop() {
+            super.stop(); // call parent stop
+            this.hide(); // and then hide
+        }
+    }
+
+    let rabbit = new Rabbit("White Rabbit");
+
+    rabbit.run(5); // White Rabbit runs with speed 5.
+    rabbit.stop(); // White Rabbit stands still. White Rabbit hides!
+    // Arrow functions have no super
+    // As was mentioned in the chapter Arrow functions revisited, arrow functions do not have super.
+
+    /*
+    Overriding constructor
+    With constructors it gets a little bit tricky.
+
+    Until now, Rabbit did not have its own constructor.
+
+    According to the specification, if a class extends another class and has no constructor, then the following “empty” constructor is generated:
+    For the Rabbit constructor to work, it needs to call super() before using this, like here:
+    */
+    class Animal {
+
+        constructor(name) {
+            this.speed = 0;
+            this.name = name;
+        }
+
+        // ...
+    }
+
+    class Rabbit extends Animal {
+
+        constructor(name, earLength) {
+            super(name);
+            this.earLength = earLength;
+        }
+
+        // ...
+    }
+
+    // now fine
+    let rabbit1 = new Rabbit("White Rabbit", 10);
+    alert(rabbit1.name); // White Rabbit
+    alert(rabbit1.earLength); // 10
+
+</script>
+
+</html>
