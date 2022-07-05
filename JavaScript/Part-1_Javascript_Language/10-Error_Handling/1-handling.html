@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<script>
+    /*
+    try...catch only works for runtime errors
+    For try...catch to work, the code must be runnable. In other words, it should be valid JavaScript.
+
+    try...catch works synchronously
+    If an exception happens in “scheduled” code, like in setTimeout, then try...catch won’t catch it:
+    */
+    setTimeout(function () {
+        try {
+            noSuchVariable; // try...catch handles the error!
+        } catch {
+            alert("error is caught here!");
+        }
+    }, 1000);
+
+    // Error object
+    try {
+        lalala;
+    } catch (err) {
+        alert(err.name); // ReferenceError
+        alert(err.message); // lalala is not defined
+        alert(err.stack); // ReferenceError: lalala is not defined at (...call stack)
+
+        // Can also show an error as a whole
+        // The error is converted to string as "name: message"
+        alert(err); // ReferenceError: lalala is not defined
+    }
+
+    let json = "{bad jason}";
+    try {
+        let user = JSON.parse(json);
+        alert(user.name);
+    } catch (err) {
+        // ...the execution jumps here
+        alert("Our apologies, the data has errors, we'll try to request it one more time.");
+        alert(err.name);
+        alert(err.message);
+    }
+
+    // Throwing our own errors
+    let json1 = '{"age" : 30}';
+    try {
+        let user1 = JSON.parse(json1);
+
+        if (!user1.name) {
+            throw new SyntaxError("Incomplete data: no name");
+        }
+
+        alert(user1.name);
+    } catch (err) {
+        alert("JSON Error: " + err.message);
+    }
+
+</script>
+
+</html>
+<!-- 
+    Error handling, "try...catch"
+No matter how great we are at programming, sometimes our scripts have errors. They may occur because of our mistakes, an unexpected user input, an erroneous server response, and for a thousand other reasons.
+
+Usually, a script “dies” (immediately stops) in case of an error, printing it to console.
+
+But there’s a syntax construct try...catch that allows us to “catch” errors so the script can, instead of dying, do something more reasonable.
+
+The “try…catch” syntax
+The try...catch construct has two main blocks: try, and then catch:
+
+try {
+
+  // code...
+
+} catch (err) {
+
+  // error handling
+
+}
+It works like this:
+
+First, the code in try {...} is executed.
+If there were no errors, then catch (err) is ignored: the execution reaches the end of try and goes on, skipping catch.
+If an error occurs, then the try execution is stopped, and control flows to the beginning of catch (err). The err variable (we can use any name for it) will contain an error object with details about what happened.
+
+So, an error inside the try {...} block does not kill the script – we have a chance to handle it in catch.
+ -->
