@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<script>
+    new Promise(function (resolve, reject) {
+        setTimeout(() => resolve(1), 1000);
+    }).then(function (result) {
+        alert(result);
+        return result * 2;
+    }).then(function (result) {
+        alert(result);
+        return result * 2;
+    }).then(function (result) {
+        alert(result);
+        return result * 2;
+    });
+
+    // the below gives 1,1,1 because the won't pass the result to each other
+    let promise = new Promise(function (resolve, reject) {
+        setTimeout(() => resolve(1), 1000);
+    });
+
+    promise.then(function (result) {
+        alert(result); // 1
+        return result * 2;
+    });
+
+    promise.then(function (result) {
+        alert(result); // 1
+        return result * 2;
+    });
+
+    promise.then(function (result) {
+        alert(result); // 1
+        return result * 2;
+    });
+</script>
+
+</html>
