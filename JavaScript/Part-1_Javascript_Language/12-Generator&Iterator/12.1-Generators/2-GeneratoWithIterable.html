@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <script>
+        function* generateSequence(){
+            yield 1;
+            yield 2;
+            yield 3;
+        }
+
+        let generator = generateSequence();
+
+        for(let value of generator){
+            alert(value);
+        }
+
+        /*
+        …But please note: the example above shows 1, then 2, and that’s all. It doesn’t show 3!
+        It’s because for..of iteration ignores the last value, when done: true. So, if we want all results to be shown by for..of, we must return them with yield:
+        */ 
+
+        let sequence = [0, ...generateSequence()];
+        alert(sequence);
+    </script>
+</html>
