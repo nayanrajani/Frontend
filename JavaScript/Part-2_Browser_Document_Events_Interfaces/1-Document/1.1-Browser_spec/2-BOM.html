@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <script>
+        alert(location.href);
+        if(confirm("Go to Wikipedia??")){
+            location.href = "https://wikipedia.org";
+        }
+    </script>
+</html>
+
+<!-- 
+    BOM (Browser Object Model)
+The Browser Object Model (BOM) represents additional objects provided by the browser (host environment) for working with everything except the document.
+
+For instance:
+
+The navigator object provides background information about the browser and the operating system. There are many properties, but the two most widely known are: navigator.userAgent – about the current browser, and navigator.platform – about the platform (can help to differentiate between Windows/Linux/Mac etc).
+The location object allows us to read the current URL and can redirect the browser to a new one.
+ -->
